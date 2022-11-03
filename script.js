@@ -1,13 +1,11 @@
 $(document).ready(function () {
-  let tabLink = $(".tab a");
+  let tabItem = $(".tab");
 
-  tabLink.on("click", function (e) {
-    e.preventDefault();
-    $(".tab").removeClass("active");
-    $(this).parent().addClass("active");
+  tabItem.on("click", function (e) {
+    $(".tab.active").removeClass("active");
+    $(this).addClass("active");
 
-    $(".tabs__content").removeClass("actived");
-    let hrefs = $(this).attr("href");
-    $(hrefs).addClass("actived");
+    $(".tabs__content.actived").removeClass("actived");
+    $(".tabs__content[data-num=" + $(this).index() + "]").addClass("actived");
   });
 });
