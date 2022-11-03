@@ -120,17 +120,22 @@ a {
 
 .tabs {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 846px;
 }
 
-.tabs__item {
+.tabs__head {
+  display: flex;
+  width: 100%;
+  list-style: none;
+}
+
+.tab a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  border-radius: 20px 20px 0px 0px;
-  color: #3922c5;
   min-height: 73px;
   padding: 0 24px;
   font-weight: 500;
@@ -138,16 +143,24 @@ a {
   line-height: 33px;
   border: none;
   cursor: pointer;
-}
-
-.tabs__item:disabled {
   background-color: #d9d9d9;
   color: #0c0c0c;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.content {
+.tab.active a {
+  background-color: #ffffff;
+  color: #3922c5;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content.actived {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 846px;
   background-color: #ffffff;
   border-radius: 0px 20px 20px 20px;
   padding: 40px 60px;
@@ -189,6 +202,12 @@ a {
   margin: 0 0 40px;
   width: 100%;
   grid-gap: 16px;
+}
+
+.list.icons li {
+  list-style: none;
+  background: url("./img/bike-icon.svg") no-repeat;
+  padding-left: 36px;
 }
 
 .feature {
