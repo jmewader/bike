@@ -4,7 +4,7 @@
 :root {
   --main-bg: #f4f4f4;
 
-  --title-color: #0c0c0c;
+  --main-color: #0c0c0c;
   --text-color: #494949;
   --text-color-white: #fff;
   --text-color-black: #000;
@@ -55,7 +55,7 @@ h1 {
   font-size: 26px;
   line-height: 39px;
   margin: 0 0 20px;
-  color: var(--title-color);
+  color: var(--main-color-text);
 }
 
 h2 {
@@ -63,7 +63,7 @@ h2 {
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
-  color: var(--title-color);
+  color: var(--main-color-text);
 }
 
 h3 {
@@ -72,12 +72,29 @@ h3 {
   font-size: 18px;
   line-height: 27px;
   margin: 0 0 20px;
-  color: var(--title-color);
+  color: var(--main-color-text);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input:focus {
+  border: 1px solid var(--input-border-color-focus);
+}
+
+input:invalid {
+  color: var(--text-color-black);
+}
+
+input:valid,
+input:not(:focus):valid {
+  border: 1px solid greenyellow;
+}
+
+input:not(:focus):invalid {
+  border: 1px solid var(--input-border-color);
 }
 
 .button {
@@ -103,11 +120,13 @@ a {
 .button-text {
   background-color: transparent;
   border: none;
-  margin: 0 24px;
-  font-size: 16px;
-  cursor: pointer;
+  min-height: 52px;
+  color: var(--main-color-text);
+  padding: 0 24px;
   border-radius: 16px;
+  font-size: 16px;
   transition: 0.25s;
+  cursor: pointer;
 }
 
 .button-text:hover {
@@ -121,7 +140,7 @@ a {
 .container {
   width: 100%;
   max-width: 1716px;
-  padding: 30px 50px 0px;
+  padding: 30px 50px 40px;
 }
 
 .accordion {
@@ -231,7 +250,7 @@ a {
 
 .list.icons li {
   list-style: none;
-  background: url("./img/bike-icon.svg") no-repeat;
+  background: url("../img/bike-icon.svg") no-repeat;
   padding-left: 36px;
 }
 
@@ -261,14 +280,11 @@ a {
   outline: none;
 }
 
-.text-field__input:focus {
-  border: 1px solid var(--input-border-color-focus);
-}
-
 .actions {
   width: 100%;
   display: flex;
   align-items: center;
+  gap: 10px;
   background-color: #ffffff;
   box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
   border-radius: 20px;

@@ -36,10 +36,7 @@
     width: 100%;
     justify-content: center;
     margin: 0 0 30px;
-  }
-
-  .paragraf {
-    font-size: 15px;
+    position: relative;
   }
 
   .feature {
@@ -60,8 +57,8 @@
 }
 
 @media (max-width: 600px) {
-  .tabs__content {
-    border-radius: 0 0 20px 20px;
+  h2 {
+    font-size: 17px;
   }
 }
 
@@ -71,11 +68,36 @@
   }
 
   .tabs__content {
-    padding: 20px 20px;
+    padding: 30px 20px;
   }
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 40px 20px 50px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .tabs__content {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .info__img_tablet img {
+    width: 100%;
+    max-width: fit-content;
+  }
+
   .tabs__head {
     display: none;
   }
@@ -112,6 +134,9 @@
     border: 0;
     font-size: 20px;
     font-weight: 500;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
   }
 
   .accordion-item--active .accordion-item__content {
@@ -120,6 +145,36 @@
 
   .accordion-item--active .accordion-item__button {
     border-radius: 20px 20px 0px 0px;
-    color: #3922C5;
+    color: #3922c5;
+  }
+
+  .accordion-item--active .accordion-item__button svg {
+    transform: rotate(180deg);
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .list__item {
+    font-size: 14px;
+  }
+
+  .text-field {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+  .button-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .actions {
+    flex-wrap: wrap;
   }
 }
