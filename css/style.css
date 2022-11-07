@@ -11,7 +11,6 @@
   --text-color-white: #fff;
   --text-color-black: #000;
   --text-color-red: #ff0000;
-  --text-color-green: #adff2f;
   --text-color-blue: #3922c5;
 
   --input-border-color: #d9d9d9;
@@ -85,11 +84,6 @@ input:focus {
 
 input:invalid {
   color: var(--text-color-black);
-}
-
-input:valid,
-input:not(:focus):valid {
-  border: 1px solid var(--text-color-green);
 }
 
 input:not(:focus):invalid {
