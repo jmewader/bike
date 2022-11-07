@@ -129,7 +129,7 @@
   .accordion-item__button {
     display: flex;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--bg-white);
     padding: 20px 22px;
     border-radius: 20px;
     border: 0;

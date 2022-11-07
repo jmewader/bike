@@ -3,11 +3,15 @@
 /*VARIABLES*/
 :root {
   --main-bg: #f4f4f4;
+  --bg-gray: #d9d9d9;
+  --bg-white: #fff;
 
   --main-color: #0c0c0c;
   --text-color: #494949;
   --text-color-white: #fff;
   --text-color-black: #000;
+  --text-color-red: #ff0000;
+  --text-color-green: #adff2f;
 
   --input-border-color: #d9d9d9;
   --input-border-color-focus: #3922c5;
@@ -21,7 +25,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  color: #000;
+  color: --main-color;
   font-family: "Montserrat", sans-serif;
   background-color: var(--main-bg);
 }
@@ -37,12 +41,6 @@ input[type="text"] {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
-}
-
-input:invalid {
-  border-color: red;
-  color: red;
-  box-shadow: none;
 }
 
 ol {
@@ -90,7 +88,7 @@ input:invalid {
 
 input:valid,
 input:not(:focus):valid {
-  border: 1px solid greenyellow;
+  border: 1px solid var(--text-color-green);
 }
 
 input:not(:focus):invalid {
@@ -177,20 +175,20 @@ input:not(:focus):invalid {
   line-height: 33px;
   border: none;
   cursor: pointer;
-  background-color: #d9d9d9;
+  background-color: var(--bg-gray);
   color: #0c0c0c;
   border-radius: 20px 20px 0px 0px;
 }
 
 .tab.active {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   color: #3922c5;
 }
 
 .tabs__content {
   flex-direction: column;
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   border-radius: 0px 20px 20px 20px;
   padding: 40px 60px;
   display: none;
@@ -212,7 +210,7 @@ input:not(:focus):invalid {
   align-items: flex-start;
   position: relative;
   padding: 0 0 40px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid var(--input-border-color);
 }
 
 .info__wrap {
@@ -272,7 +270,7 @@ input:not(:focus):invalid {
   font-weight: 400;
   line-height: 24px;
   color: #212529;
-  background-color: #fff;
+  background-color: var(--bg-white);
   background-clip: padding-box;
   border: 1px solid var(--input-border-color);
   border-radius: 16px;
@@ -285,7 +283,7 @@ input:not(:focus):invalid {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   box-shadow: 0px 10px 40px rgba(12, 12, 12, 0.1);
   border-radius: 20px;
   padding: 30px 36px;
